@@ -1,4 +1,4 @@
-eventsApp.controller('EventController', function($scope, eventData, $log){
+eventsApp.controller('EventController', function($scope, eventData, $log, $anchorScroll){
 
 	/*eventData.getEvent(function(event){
 		console.log(event);
@@ -29,6 +29,10 @@ eventsApp.controller('EventController', function($scope, eventData, $log){
 		}else{
 			session.upVoteCount--;
 		}
+	};
+
+	$scope.scrollToSession = function(){
+		$anchorScroll();
 	};
 
 });

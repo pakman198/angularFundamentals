@@ -20,6 +20,7 @@
 
 		<div ng-controller="EventController">
 			<img ng-src="{{event.imageUrl}}" alt="{{event.name}}">
+			<button type="button" class="btn btn-primary" ng-click="scrollToSession()">Scroll</button>
 			<div class="row">
 				<div class="span12">
 					<h2>{{event.name}}</h2>
@@ -43,7 +44,7 @@
 
 			<h3>Sessions</h3>
 			<ul class="unstyled">
-				<li ng-repeat="session in event.sessions">
+				<li ng-repeat="session in event.sessions" id="session{{session.id}}">
 					<div class="row">
 						<div class="span0 well">
 							<div class="votingButton" ng-click="upVoteSession(session)"><i class="glyphicon icon-chevron-up icon-white"></i></div>
